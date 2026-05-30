@@ -57,7 +57,21 @@ final class SquareWebhook
         }
 
         if (!$this->verifySignature($notificationUrl, $rawBody, $signatureKey, $signatureHeader)) {
-            error_log('[square-webhook] signature mismatch for url=' . $notificationUrl);
+            // Diagnostic: if the live key didn't match, try the parked sandbox and
+            // production keys and report which (if any) would have verified. Saves
+            // a guessing game when the dashboard subscription's env doesn't match
+            // the env loaded into the live key.
+            $sandboxKey = trim((string) ($this->settings->getStored('SQUARE_WEBHOOK_SIGNATURE_KEY__SANDBOX') ?? ''));
+            $prodKey = trim((string) ($this->settings->getStored('SQUARE_WEBHOOK_SIGNATURE_KEY__PRODUCTION') ?? ''));
+            $matches = [];
+            if ($sandboxKey !== '' && $this->verifySignature($notificationUrl, $rawBody, $sandboxKey, $signatureHeader)) {
+                $matches[] = 'SANDBOX';
+            }
+            if ($prodKey !== '' && $this->verifySignature($notificationUrl, $rawBody, $prodKey, $signatureHeader)) {
+                $matches[] = 'PRODUCTION';
+            }
+            $hint = $matches === [] ? 'no stored key matched (keys may be stale)' : 'matched parked key for: ' . implode(', ', $matches);
+            error_log('[square-webhook] signature mismatch for url=' . $notificationUrl . ' — ' . $hint);
             return [401, 'Invalid signature.'];
         }
 
