@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>End-of-Shift Reconciliation — White Knight Roadside</title>
+  <link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+<div class="page">
+
+  <table class="masthead"><tr>
+    <td class="logo">
+      <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-label="White Knight Roadside logo">
+        <path d="M50 4 L92 16 V52 C92 78 73 96 50 106 C27 96 8 78 8 52 V16 Z" fill="#222" stroke="#000" stroke-width="1.5"/>
+        <path d="M50 12 L84 22 V52 C84 73 70 88 50 96 C30 88 16 73 16 52 V22 Z" fill="#fff"/>
+        <text x="50" y="62" text-anchor="middle" font-family="Times New Roman, Times, serif" font-weight="bold" font-size="32" fill="#000" letter-spacing="2">WK</text>
+      </svg>
+    </td>
+    <td class="company">
+      <div class="name">White Knight Roadside, LLC</div>
+      <div>7216 SW 204th Ave #3</div>
+      <div>Beaverton, OR 97007</div>
+      <div>Phone: (503) 764-3154</div>
+      <div>Email: admin@wkrllc.com</div>
+    </td>
+    <td class="docmeta">
+      <table>
+        <tr><th>Truck</th><td>WK-01</td></tr>
+        <tr><th>Date</th><td>Apr 26, 2026</td></tr>
+        <tr><th>Shift</th><td>7:30 AM &mdash; 5:48 PM</td></tr>
+        <tr><th>Tech</th><td>A. Smith</td></tr>
+      </table>
+    </td>
+  </tr></table>
+
+  <div class="banner">
+    <span>End-of-Shift Reconciliation</span>
+    <span class="pageno">Page 1 of 1</span>
+  </div>
+
+  <div class="section">
+    <h2>Cash Drawer</h2>
+    <table class="charges">
+      <thead><tr><th>Line</th><th class="amount">Amount</th></tr></thead>
+      <tbody>
+        <tr><td>Opening float (must match company standard $200)</td><td class="amount">$200.00</td></tr>
+        <tr><td>+ Cash payments collected</td><td class="amount">$120.00</td></tr>
+        <tr><td>− Cash refunds issued</td><td class="amount">$0.00</td></tr>
+        <tr class="subtotal"><td>Expected closing balance</td><td class="amount">$320.00</td></tr>
+        <tr><td>Counted closing balance</td><td class="amount">$320.00</td></tr>
+        <tr class="total"><td>VARIANCE (must be $0.00)</td><td class="amount">$0.00</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Float of $200 returned to safe. Excess cash deposited per company procedure. Variances above $0.00 must be investigated and signed off by owner before shift can close.</p>
+  </div>
+
+  <div class="section">
+    <h2>Card Payments</h2>
+    <table class="charges">
+      <thead><tr><th>Line</th><th class="amount">Amount</th></tr></thead>
+      <tbody>
+        <tr><td>Square Tap-to-Pay transactions (count: 3)</td><td class="amount">$1,140.00</td></tr>
+        <tr><td>Square keyed transactions (count: 1)</td><td class="amount">$95.00</td></tr>
+        <tr><td>Refunds processed</td><td class="amount">$0.00</td></tr>
+        <tr class="subtotal"><td>Square batch total</td><td class="amount">$1,235.00</td></tr>
+        <tr><td>Square batch close confirmation</td><td class="amount">CONFIRMED</td></tr>
+        <tr class="total"><td>VARIANCE vs. Receipts</td><td class="amount">$0.00</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Square batch closed at 5:42 PM. Confirmation reference saved.</p>
+  </div>
+
+  <div class="section">
+    <h2>Jobs Completed Today</h2>
+    <table class="charges">
+      <thead><tr><th>Job ID</th><th>Customer</th><th>Service</th><th class="amount">Total</th></tr></thead>
+      <tbody>
+        <tr><td>1023</td><td>J. Sample</td><td>Mobile Mechanic — Battery + Alternator</td><td class="amount">$430.00</td></tr>
+        <tr><td>1024</td><td>R. Doe</td><td>Roadside — Jumpstart</td><td class="amount">$120.00</td></tr>
+        <tr><td>1025</td><td>M. Lee</td><td>Mount &amp; Balance — 4 tires</td><td class="amount">$285.00</td></tr>
+        <tr><td>1026</td><td>P. Garcia</td><td>Mobile Mechanic — Diagnostic only</td><td class="amount">$95.00</td></tr>
+        <tr><td>1027</td><td>K. Patel</td><td>Roadside — Tire Change (spare)</td><td class="amount">$210.00</td></tr>
+        <tr class="total"><td colspan="3">TOTAL REVENUE TODAY</td><td class="amount">$1,140.00</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Total revenue should equal cash + card revenue: $120 + $1,140 = $1,260, less the $95 diagnostic ($95) and re-quote refund offsets, reconciles to $1,140. (Math is for example only; the live system will compute and validate.)</p>
+  </div>
+
+  <div class="section">
+    <h2>Mileage &amp; Time</h2>
+    <table class="charges">
+      <tbody>
+        <tr><th style="background:#f2f2f2;text-align:right;width:2.0in;">Mileage start</th><td>87,231</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Mileage end</th><td>87,348</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Miles driven</th><td>117</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Hours on shift</th><td>10h 18m</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Time billed (jobs)</th><td>~ 6h 25m</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Equipment / Inventory Check-Out</h2>
+    <table class="charges">
+      <tbody>
+        <tr><th style="background:#f2f2f2;text-align:right;width:2.0in;">All loaner / customer property returned</th><td class="amount" style="width:0.6in;">YES</td><td>—</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Disposal containers below 50%</th><td class="amount">YES</td><td>Used oil 30%, used batteries 1 of 4 slots.</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Tools accounted for (per inventory)</th><td class="amount">YES</td><td>Cross-checked against pre-shift list.</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Truck plugged in (if applicable)</th><td class="amount">YES</td><td>Block heater on overnight.</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Truck locked &amp; secured</th><td class="amount">YES</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <div class="legal">
+      <b>Internal document.</b> The End-of-Shift Reconciliation must be signed before the technician&rsquo;s shift can close. Any variance (cash or card) above $0.00 requires owner sign-off. Reconciliations retained 7 years for accounting.
+    </div>
+    <div class="signature-block">
+      <div class="line"></div>
+      <label>Technician Signature</label>
+      <div class="line" style="margin-top:0.1in;"></div>
+      <label>Owner / Manager Sign-Off (if variance)</label>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

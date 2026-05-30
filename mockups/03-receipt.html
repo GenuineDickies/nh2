@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Customer Receipt — White Knight Roadside</title>
+  <link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- ─── MASTHEAD ─── -->
+  <table class="masthead"><tr>
+    <td class="logo">
+      <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-label="White Knight Roadside logo">
+        <path d="M50 4 L92 16 V52 C92 78 73 96 50 106 C27 96 8 78 8 52 V16 Z" fill="#222" stroke="#000" stroke-width="1.5"/>
+        <path d="M50 12 L84 22 V52 C84 73 70 88 50 96 C30 88 16 73 16 52 V22 Z" fill="#fff"/>
+        <text x="50" y="62" text-anchor="middle" font-family="Times New Roman, Times, serif" font-weight="bold" font-size="32" fill="#000" letter-spacing="2">WK</text>
+      </svg>
+    </td>
+    <td class="company">
+      <div class="name">White Knight Roadside, LLC</div>
+      <div>7216 SW 204th Ave #3</div>
+      <div>Beaverton, OR 97007</div>
+      <div>Phone: (503) 764-3154</div>
+      <div>Email: admin@wkrllc.com</div>
+    </td>
+    <td class="docmeta">
+      <table>
+        <tr><th>Receipt #</th><td>R-1023</td></tr>
+        <tr><th>Job ID</th><td>1023</td></tr>
+        <tr><th>Date</th><td>Apr 26, 2026</td></tr>
+        <tr><th>Time</th><td>11:38 AM</td></tr>
+        <tr><th>Tech</th><td>A. Smith</td></tr>
+      </table>
+    </td>
+  </tr></table>
+
+  <!-- ─── BANNER ─── -->
+  <div class="banner">
+    <span>Receipt</span>
+    <span class="pageno">Page 1 of 1</span>
+  </div>
+
+  <!-- ─── META STRIP ─── -->
+  <table class="meta-strip"><tr>
+    <td class="customer">
+      <div class="name">J. Sample</div>
+      <div>1234 SE Example St</div>
+      <div>Portland, OR 97214</div>
+      <div>Cell: (503) 555-0142</div>
+      <div>j.sample@example.com</div>
+    </td>
+    <td class="vehicle">
+      <table>
+        <tr><th>Year</th><td>2015</td><th>Make</th><td>HONDA</td></tr>
+        <tr><th>Model</th><td colspan="3">CIVIC LX</td></tr>
+        <tr><th>VIN</th><td colspan="3">19XFB2F50FE000000</td></tr>
+        <tr><th>Plate</th><td>123 ABC</td><th>State</th><td>OR</td></tr>
+        <tr><th>Mileage Out</th><td colspan="3">112,481</td></tr>
+      </table>
+    </td>
+    <td class="totals">
+      <table>
+        <tr><th>Service</th><td class="right">$270.00</td></tr>
+        <tr><th>Parts</th><td class="right">$160.00</td></tr>
+        <tr><th>Surcharges</th><td class="right">$0.00</td></tr>
+        <tr><th>Subtotal</th><td class="right">$430.00</td></tr>
+        <tr><th>Tax</th><td class="right">$0.00</td></tr>
+        <tr class="grand"><th>Total Paid</th><td class="right">$430.00</td></tr>
+      </table>
+    </td>
+  </tr></table>
+
+  <!-- ─── DETAIL BAR ─── -->
+  <table class="detail-bar"><tr>
+    <th>Service Type</th><td>Mobile Mechanic — Battery + Alternator</td>
+    <th>Time on Scene</th><td>9:57 AM – 11:38 AM (1h 41m)</td>
+  </tr></table>
+
+  <!-- ─── BODY: SERVICE PERFORMED ─── -->
+  <div class="section">
+    <h2>Service Performed</h2>
+    <table class="charges">
+      <thead><tr><th>Description</th><th class="amount">Amount</th></tr></thead>
+      <tbody>
+        <tr><td>Mobile Mechanic — Battery replacement (Group 51R AGM)</td><td class="amount">$180.00</td></tr>
+        <tr><td>Mobile Mechanic — Alternator R&amp;R (per signed Change Order 1023-01)</td><td class="amount">$250.00</td></tr>
+        <tr><td>Surcharges (after-hours, mileage, hazard)</td><td class="amount">$0.00</td></tr>
+        <tr class="subtotal"><td>Subtotal</td><td class="amount">$430.00</td></tr>
+        <tr><td>Tax</td><td class="amount">$0.00</td></tr>
+        <tr class="total"><td>TOTAL PAID</td><td class="amount">$430.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── PAYMENT ─── -->
+  <div class="section">
+    <h2>Payment</h2>
+    <table class="charges">
+      <tr>
+        <th style="width:1.4in;background:#f2f2f2;text-align:right;">Method</th>
+        <td>Visa •• 4242 (Square Tap-to-Pay)</td>
+        <th style="width:1.2in;background:#f2f2f2;text-align:right;">Authorization</th>
+        <td class="amount" style="width:1.2in;">A1B2C3</td>
+      </tr>
+      <tr>
+        <th style="background:#f2f2f2;text-align:right;">Captured At</th>
+        <td>Apr 26, 2026 11:38 AM</td>
+        <th style="background:#f2f2f2;text-align:right;">Status</th>
+        <td class="amount">Captured</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ─── REVIEW LINK ─── -->
+  <div class="section">
+    <h2>Reviews Help Small Businesses Like Ours</h2>
+    <p>If you&rsquo;d like to share your experience, here is the link &mdash; no pressure either way.</p>
+    <table class="charges">
+      <tr>
+        <th style="width:1.6in;background:#f2f2f2;text-align:right;">Google Review</th>
+        <td><span class="muted">https://g.page/r/</span><b>WhiteKnightRoadsidePDX</b><span class="muted">/review</span></td>
+      </tr>
+      <tr>
+        <th style="background:#f2f2f2;text-align:right;">Or scan</th>
+        <td><span class="muted">[QR code rendered here on the digital receipt]</span></td>
+      </tr>
+    </table>
+    <p class="small muted">This is the only place we&rsquo;ll ever ask. We won&rsquo;t call, text, or email you about a review.</p>
+  </div>
+
+  <!-- ─── WARRANTY ─── -->
+  <div class="section">
+    <h2>Warranty &amp; Comeback Policy</h2>
+    <p><b>Workmanship.</b> 12 months or 12,000 miles, whichever comes first, on labor performed.</p>
+    <p><b>White-Knight-supplied parts.</b> Pass-through of the manufacturer warranty, with White Knight handling the warranty claim on your behalf. Battery and alternator installed today carry a Duralast Gold lifetime warranty (pro-rated per manufacturer terms); retain this Receipt as your proof of purchase.</p>
+    <p><b>Comeback policy.</b> If you experience a warranty-period issue that appears related to our work, call (503) 764-3154 &mdash; we will return to assess at no charge. If the issue is our work, repair is free; if unrelated, standard rates apply (you&rsquo;ll be informed first).</p>
+    <p class="small">Warranty does not cover damage from accident, abuse, neglect, modification by others, or operation outside manufacturer specifications. Customer-provided parts: workmanship-only warranty applies.</p>
+  </div>
+
+  <!-- ─── FOOTER ─── -->
+  <div class="footer">
+    <div class="legal">
+      <b>Customer Acknowledgement of Completion.</b> By signing below, I acknowledge that the service described above has been completed to my satisfaction and I have received this Receipt as my record of the work performed.<br><br>
+      <b>Thank you for choosing White Knight Roadside. Drive safely!</b> Questions about your service? Call (503) 764-3154 or email service@wkrllc.com. Please retain this Receipt for warranty claims and your records.
+    </div>
+    <div class="signature-block">
+      <div class="line"></div>
+      <label>Customer Signature</label>
+      <div class="row">
+        <div class="field">
+          <div class="line"></div>
+          <label>Printed Name</label>
+        </div>
+        <div class="field date">
+          <div class="line"></div>
+          <label>Date / Time</label>
+        </div>
+      </div>
+      <div class="line" style="margin-top:0.1in;"></div>
+      <label>Technician Signature</label>
+      <div class="total-pill">
+        <span>Total Paid</span>
+        <span>$430.00</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

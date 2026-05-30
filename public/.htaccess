@@ -1,0 +1,27 @@
+# Front-controller routing: send every request that isn't a real
+# file or directory to index.php so the App\Core\Router can handle it.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Strip a trailing slash from URIs other than the root.
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+    # Pass real files (CSS, JS, images) through untouched.
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else: rewrite to index.php while preserving the path.
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Defense in depth: never serve dotfiles even if one ends up under
+# the document root.
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Use UTF-8 for text responses by default.
+AddDefaultCharset UTF-8

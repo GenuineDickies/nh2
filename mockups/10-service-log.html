@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Service Log — White Knight Roadside</title>
+  <link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+<div class="page">
+
+  <table class="masthead"><tr>
+    <td class="logo">
+      <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-label="White Knight Roadside logo">
+        <path d="M50 4 L92 16 V52 C92 78 73 96 50 106 C27 96 8 78 8 52 V16 Z" fill="#222" stroke="#000" stroke-width="1.5"/>
+        <path d="M50 12 L84 22 V52 C84 73 70 88 50 96 C30 88 16 73 16 52 V22 Z" fill="#fff"/>
+        <text x="50" y="62" text-anchor="middle" font-family="Times New Roman, Times, serif" font-weight="bold" font-size="32" fill="#000" letter-spacing="2">WK</text>
+      </svg>
+    </td>
+    <td class="company">
+      <div class="name">White Knight Roadside, LLC</div>
+      <div>7216 SW 204th Ave #3</div>
+      <div>Beaverton, OR 97007</div>
+      <div>Phone: (503) 764-3154</div>
+      <div>Email: admin@wkrllc.com</div>
+    </td>
+    <td class="docmeta">
+      <table>
+        <tr><th>Job ID</th><td>1023</td></tr>
+        <tr><th>Date</th><td>Apr 26, 2026</td></tr>
+        <tr><th>Tech</th><td>A. Smith</td></tr>
+        <tr><th>Truck</th><td>WK-01</td></tr>
+        <tr><th>Outcome</th><td>Completed</td></tr>
+      </table>
+    </td>
+  </tr></table>
+
+  <div class="banner">
+    <span>Service Log</span>
+    <span class="pageno">Page 1 of 1</span>
+  </div>
+
+  <table class="meta-strip"><tr>
+    <td class="customer">
+      <div class="name">J. Sample</div>
+      <div>1234 SE Example St, Portland, OR 97214</div>
+    </td>
+    <td class="vehicle">
+      <table>
+        <tr><th>Vehicle</th><td colspan="3">2015 HONDA CIVIC LX</td></tr>
+        <tr><th>VIN</th><td colspan="3">19XFB2F50FE000000</td></tr>
+        <tr><th>Service</th><td colspan="3">Mobile Mechanic &mdash; Battery + Alternator</td></tr>
+      </table>
+    </td>
+  </tr></table>
+
+  <div class="section">
+    <h2>Stage Time Log (server-time, immutable)</h2>
+    <table class="charges">
+      <thead><tr>
+        <th>Stage</th>
+        <th class="amount" style="width:1.4in;">Time</th>
+        <th>Notes</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Intake call received</td><td class="amount">9:38 AM</td><td>Dispatcher K. Roberts; SR 1023.</td></tr>
+        <tr><td>Approved &amp; estimate sent</td><td class="amount">9:42 AM</td><td>E-1023 quoted at $180.00.</td></tr>
+        <tr><td>Tech assigned (accepted)</td><td class="amount">9:45 AM</td><td>A. Smith; WK-01.</td></tr>
+        <tr><td>En route</td><td class="amount">9:46 AM</td><td>Customer notified via SMS.</td></tr>
+        <tr><td>On scene (arrival)</td><td class="amount">9:55 AM</td><td>Hazard assessment passed; VCR completed.</td></tr>
+        <tr><td>Waiver signed</td><td class="amount">9:57 AM</td><td>Customer J. Sample; Total Agreed $180.00.</td></tr>
+        <tr><td>Work began</td><td class="amount">9:58 AM</td><td>Battery R&amp;R started.</td></tr>
+        <tr><td>STOP &mdash; charging-system fault</td><td class="amount">10:35 AM</td><td>Alternator failing; Change Order generated (CO 1023-01).</td></tr>
+        <tr><td>Change Order signed</td><td class="amount">10:42 AM</td><td>New Total Agreed $430.00.</td></tr>
+        <tr><td>Work resumed</td><td class="amount">10:43 AM</td><td>Alternator R&amp;R.</td></tr>
+        <tr><td>Service complete</td><td class="amount">11:35 AM</td><td>Vehicle starts; charging system 14.1 V verified.</td></tr>
+        <tr><td>Receipt signed &amp; payment captured</td><td class="amount">11:38 AM</td><td>Visa •• 4242, $430.00; Auth A1B2C3.</td></tr>
+        <tr><td>Cleared scene</td><td class="amount">11:42 AM</td><td>Disposal documented (separate log).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Work Performed (narrative)</h2>
+    <p>Removed failed Group 51R battery; cleaned terminals and battery tray; installed Duralast Gold AGM. Performed charging-system load test &mdash; alternator output 11.8 V at 2,000 RPM under load (spec ≥ 13.5 V). Stopped, generated Change Order, customer signed at $430.00 New Total. Removed alternator (4 fasteners + 2 wiring connections), installed remanufactured 105A unit, re-tensioned belt. Verified charging at 14.1 V at idle, 14.2 V at 2,000 RPM under load. No-start symptom resolved; vehicle starts crisply.</p>
+  </div>
+
+  <div class="section">
+    <h2>Measurements</h2>
+    <table class="charges">
+      <tbody>
+        <tr><th style="background:#f2f2f2;text-align:right;width:2.2in;">Battery rest voltage (before)</th><td>11.9 V (failed spec)</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Battery rest voltage (new, before charge)</th><td>12.7 V</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Charging output (before alternator R&amp;R)</th><td>11.8 V at 2,000 RPM (failed spec)</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Charging output (after alternator R&amp;R)</th><td>14.2 V at 2,000 RPM (in spec)</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Belt tension</th><td>OK after install</td></tr>
+        <tr><th style="background:#f2f2f2;text-align:right;">Mileage in / out</th><td>112,480 / 112,481</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Parts Used</h2>
+    <table class="charges">
+      <thead><tr><th>SKU</th><th>Description</th><th class="amount">Qty</th></tr></thead>
+      <tbody>
+        <tr><td>51R-DLG</td><td>Duralast Gold AGM Battery, Group 51R</td><td class="amount">1</td></tr>
+        <tr><td>ALT-DG-105</td><td>Duralast Gold remanufactured alternator, 105A</td><td class="amount">1</td></tr>
+        <tr><td>—</td><td>Battery terminal cleaner (consumable)</td><td class="amount">1</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Photos &amp; Disposal</h2>
+    <p class="small">Universal photo set + service-specific (battery before/after, alternator before/after, multimeter readings rest &amp; running). All EXIF-verified, uploaded before clearing scene.</p>
+    <p class="small">Old battery and core alternator returned to truck for supplier core return; entries logged in Disposal Log (separate document).</p>
+  </div>
+
+  <div class="footer">
+    <div class="legal">
+      <b>Internal document.</b> The Service Log is technician-completed and serves as the definitive narrative record of the visit. Each row of the stage time log is server-time-stamped at the moment of state change and is immutable. Customer does not sign.
+    </div>
+    <div class="signature-block">
+      <div class="line"></div>
+      <label>Technician Signature</label>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

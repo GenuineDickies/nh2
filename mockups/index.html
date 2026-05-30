@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>White Knight customer-document mockups</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 760px; margin: 2em auto; padding: 0 1.5em; color: #222; line-height: 1.5; }
+    h1, h2 { border-bottom: 2px solid #000; padding-bottom: 6px; }
+    h2 { margin-top: 2em; font-size: 1.15em; }
+    ol { padding-left: 1.5em; }
+    li { margin-bottom: 0.4em; }
+    a { color: #1551b5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .note { background: #f6f5e9; border-left: 3px solid #c9a23a; padding: 0.7em 1em; margin: 1em 0; font-size: 0.95em; }
+    .meta { color: #666; font-size: 0.9em; }
+    code { background: #f0f0f0; padding: 1px 4px; border-radius: 3px; font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <h1>White Knight — workbook mockups</h1>
+  <p>All documents from the Operations Document Book, styled to match the reference Estimate (Times New Roman, table-heavy layout, black banner header). All data is fictional. The logo is a placeholder shield with "WK" — replace with the real logo when ready.</p>
+
+  <h2>Customer-facing (signed)</h2>
+  <p class="meta">These four are the documents the customer interacts with directly. Per Doc Principle 1, only the Waiver and Receipt require a customer signature for normal jobs; the other two only appear in special situations.</p>
+  <ol>
+    <li><a href="00-estimate.html">Estimate</a> <span class="meta">— quote produced when an SR is approved for dispatch (Doc §1.3 doc 2)</span></li>
+    <li><a href="01-waiver.html">Service Authorization, Charges &amp; Liability Waiver</a> <span class="meta">— signed before work begins (Doc §6)</span></li>
+    <li><a href="02-change-order.html">Change Order</a> <span class="meta">— signed when scope/price exceeds the Oregon threshold mid-job (Doc §1.8 P4)</span></li>
+    <li><a href="03-receipt.html">Customer Receipt</a> <span class="meta">— signed at completion; the liability anchor (Doc §11)</span></li>
+  </ol>
+
+  <h2>Customer-facing (cancellation paths)</h2>
+  <ol start="5">
+    <li><a href="04-customer-refusal.html">Customer Refusal of Service</a> <span class="meta">— customer declines after tech arrival; dispatch fee may apply (Doc §10.2)</span></li>
+    <li><a href="05-technician-decline.html">Technician Decline of Service</a> <span class="meta">— tech declines for safety / scope; full refund (Doc §10.3)</span></li>
+  </ol>
+
+  <h2>Customer-facing (informational)</h2>
+  <ol start="7">
+    <li><a href="06-diagnostic-report.html">Diagnostic Report</a> <span class="meta">— Mobile Mechanic findings + estimate to repair (Doc §3.6.3)</span></li>
+    <li><a href="11-tow-referral.html">Tow Referral</a> <span class="meta">— info-provided log; customer signs nothing (Doc §12)</span></li>
+  </ol>
+
+  <h2>Internal / tech-completed</h2>
+  <p class="meta">The customer doesn't sign these, but they're part of the job record and use the same visual language for company branding consistency.</p>
+  <ol start="9">
+    <li><a href="07-service-request.html">Service Request</a> <span class="meta">— intake form; system-of-record entry that initiates the job (Doc §5)</span></li>
+    <li><a href="08-vehicle-condition-report.html">Vehicle Condition Report</a> <span class="meta">— on-scene panel-by-panel inspection (Doc §7)</span></li>
+    <li><a href="09-hazard-assessment.html">Hazard Assessment</a> <span class="meta">— pre-work safety checklist + decision (Doc §8)</span></li>
+    <li><a href="10-service-log.html">Service Log</a> <span class="meta">— stage timeline, work narrative, measurements, parts (Doc §9)</span></li>
+    <li><a href="12-incident-report.html">Incident Report</a> <span class="meta">— damage / injury / near-miss (Doc §13)</span></li>
+    <li><a href="13-truck-inspection.html">Daily Truck Inspection</a> <span class="meta">— pre-shift; truck/equipment/M&amp;B kit/Mobile Mechanic kit (Doc §14)</span></li>
+    <li><a href="14-end-of-shift.html">End-of-Shift Reconciliation</a> <span class="meta">— cash, card, mileage, equipment close-out (Doc §15)</span></li>
+  </ol>
+
+  <div class="note">
+    <b>Print to PDF</b> from any of these to get a paper-perfect mockup: <code>Ctrl+P</code> → Save as PDF → Letter, default margins. The CSS includes <code>@page</code> rules so screen and print look the same.
+  </div>
+
+  <h2>What's still pending</h2>
+  <ul>
+    <li>Real legal language. The text in these mockups is paraphrased from the Doc; ship-ready language needs Oregon-licensed counsel review.</li>
+    <li>The real logo. Drop-in replacement when ready — the inline <code>&lt;svg&gt;</code> block at the top of each file is the only thing to swap.</li>
+    <li>SMS templates (5x) from Doc §17.4 — those are text-message bodies, not full documents. Could be mocked separately if you want.</li>
+    <li>An optional 10DLC compliance workbook (Doc §17.2) — separate document, deferred.</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,43 @@
+/.env
+/.env.local
+/storage/*.sqlite
+/storage/*.sqlite-journal
+/storage/*.log
+/storage/logs/
+/storage/uploads/
+/storage/generated-pdfs/
+/storage/*.pid
+/storage/sent-mail/
+/storage/smoke-test-pdfs/
+
+# Claude Code workspace settings
+/.claude/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# PHP composer (not used yet but reserve the path)
+/vendor/
+composer.lock
+
+# Local-only debug scripts (never in repo, may carry dev creds)
+/_runtime_probe.ps1
+/scripts/_smoke_*.php
+/scripts/_reset_user_password.php
+
+# Curl cookie jars and ad-hoc smoke-test artifacts
+/-b
+/cookies.txt
+/csrf.txt
+/square_page.html
+
+# Personal documents that wandered into the working tree
+/Table_of_Heirship_editable.pdf
+/preview_heirship.png
+
+# Node (in case anything ever pulls it in)
+/node_modules/
