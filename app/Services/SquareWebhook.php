@@ -182,7 +182,10 @@ final class SquareWebhook
             return $this->stringOrNull($object['refund']['payment_id'] ?? null);
         }
         if (strncmp($type, 'dispute.', 8) === 0) {
-            return $this->stringOrNull($object['dispute']['id'] ?? null);
+            // The meaningful cross-reference for a dispute is the payment being
+            // disputed — that's what links to our payments table. The dispute's
+            // own id stays in the payload column for forensics.
+            return $this->stringOrNull($object['dispute']['disputed_payment']['payment_id'] ?? null);
         }
         return null;
     }
@@ -239,8 +242,29 @@ final class SquareWebhook
             return ['matched', (int) $local['invoice_id'], 'Refund logged for in-app payment #' . $local['id'] . '.'];
         }
 
-        // dispute.created — no in-app dispute model; log only.
-        return ['matched', null, 'Dispute logged.'];
+        // dispute.created — no in-app dispute model, but pull the reason/amount/state
+        // into the audit message so triage doesn't require opening the payload column.
+        $dispute = $event['data']['object']['dispute'] ?? null;
+        if (!is_array($dispute)) {
+            return ['unmatched', null, 'No dispute object in payload.'];
+        }
+        $paymentRef = $this->stringOrNull($dispute['disputed_payment']['payment_id'] ?? null);
+        $reason = (string) ($dispute['reason'] ?? 'unspecified');
+        $state = (string) ($dispute['state'] ?? 'unspecified');
+        $amount = isset($dispute['amount_money']['amount'])
+            ? sprintf('$%.2f %s', ((int) $dispute['amount_money']['amount']) / 100, (string) ($dispute['amount_money']['currency'] ?? ''))
+            : 'unknown amount';
+
+        if ($paymentRef === null) {
+            return ['unmatched', null, sprintf('Dispute (%s, %s, %s) — no disputed payment id.', $reason, $state, $amount)];
+        }
+
+        $local = $this->findLocalPaymentByReference($paymentRef);
+        if (!$local) {
+            return ['unmatched', null, sprintf('Dispute on Square payment %s (%s, %s, %s) — no in-app payment.', $paymentRef, $reason, $state, $amount)];
+        }
+
+        return ['matched', (int) $local['invoice_id'], sprintf('Dispute on in-app payment #%d: %s, %s, %s.', (int) $local['id'], $reason, $state, $amount)];
     }
 
     private function findLocalPaymentByReference(string $reference): ?array
